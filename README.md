@@ -27,5 +27,28 @@ During this project, I focused on learning and experimenting with:
 
 ---
 
-## 📁 Project Structure
+## 🧠 Key Learnings
+
+- How **Next.js App Router** changes routing and rendering compared to the Pages Router.  
+- How to use the **`<Image />`** component for automatic image optimization.  
+- How to write and integrate **custom hooks** (`useFetch`, `useCart`, etc.).  
+- How to structure a project cleanly for scalability.
+
+---
+
+## ⚙️ Running Locally
+
+```bash
+# Clone this repository
+git clone https://github.com/<your-username>/foodiea-shop.git
+
+# Navigate to project directory
+cd foodiea-shop
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
 
