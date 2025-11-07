@@ -9,7 +9,7 @@ This project helped me explore concepts like routing, image optimization, and us
 
 - **Next.js 14 (App Router)**
 - **React**
-- **CSS / Tailwind CSS** (depending on setup)
+- **CSS  (depending on setup)
 - **Next Image Component**
 - **Custom React Hooks**
 
