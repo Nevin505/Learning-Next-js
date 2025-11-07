@@ -1,0 +1,23 @@
+{
+  "name": "foodies",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "next": "^15.6.0-canary.9",
+    "react": "^19.0.0-rc-de68d2f4-20241204",
+    "react-dom": "^19.0.0-rc-de68d2f4-20241204",
+    "slug": "^8.2.3",
+    "xss": "^1.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3"
+  }
+}
