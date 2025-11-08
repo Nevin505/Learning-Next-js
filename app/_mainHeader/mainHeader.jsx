@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLink from "./navLInks";
 
 const MainHeader = () => {
   return (
@@ -9,7 +10,11 @@ const MainHeader = () => {
       <nav>
         <ul>
           <li>
-            <Link href="/news">News</Link>
+            {/* <Link href="/news">News</Link> */}
+            <NavLink href="/news" navLink="News" />
+          </li>
+          <li>
+            <NavLink href="/archive" navLink="Archive" />
           </li>
         </ul>
       </nav>
