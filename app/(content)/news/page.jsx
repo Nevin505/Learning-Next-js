@@ -1,16 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import { DUMMY_NEWS } from "@/dummy";
+import { getAllNews } from "@/lib/dummy";
 const page = async () => {
-  const result=await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("hio") 
-     },5000)
-  })
-  console.log("the resul",result);
+
+  const news = getAllNews();
+  console.log("the news inside",news);
   
-  const response = await fetch("http://localhost:8080/news");
-  const news = await response.json();
   return (
     <div>
       <ul className="news-list">
