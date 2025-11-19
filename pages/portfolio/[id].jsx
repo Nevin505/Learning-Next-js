@@ -1,11 +1,9 @@
-import { useRouter } from "next/router"
+import { useRouter } from "next/router";
 
 const DynamicValues = () => {
-    const router = useRouter();
-    const { id}=router.query;
-  return (
-      <div>DynamicValues in portfolio { id}</div>
-  )
-}
+  const router = useRouter();
+  const { id } = router.query;
+  return <div>DynamicValues in portfolio{id}</div>;
+};
 
-export default DynamicValues
+export default DynamicValues;
