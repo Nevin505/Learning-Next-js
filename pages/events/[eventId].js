@@ -1,28 +1,30 @@
-import { Fragment } from 'react';
-import { useRouter } from 'next/router';
+import { Fragment } from "react";
+import { useRouter } from "next/router";
 
-import { getEventById } from '../../dummy-data';
-import EventSummary from '../../components/event-detail/event-summary';
-import EventLogistics from '../../components/event-detail/event-logistics';
-import EventContent from '../../components/event-detail/event-content';
-import ErrorAlert from '../../components/ui/error-alert';
+import { getEventById } from "../../dummy-data";
+import EventSummary from "../../components/event-detail/event-summary";
+import EventLogistics from "../../components/event-detail/event-logistics";
+import EventContent from "../../components/event-detail/event-content";
+import ErrorAlert from "../../components/ui/error-alert";
+import { getEventByID } from "../../utils/events";
+import Head from "next/head";
 
-function EventDetailPage() {
-  const router = useRouter();
-
-  const eventId = router.query.eventId;
-  const event = getEventById(eventId);
+function EventDetailPage(props) {
+  const { event } = props;
 
   if (!event) {
     return (
-      <ErrorAlert>
+      <div className="text-center">
         <p>No event found!</p>
-      </ErrorAlert>
+      </div>
     );
   }
 
   return (
     <Fragment>
+      <Head>
+        <title>{event.title}</title>
+      </Head>
       <EventSummary title={event.title} />
       <EventLogistics
         date={event.date}
@@ -37,4 +39,12 @@ function EventDetailPage() {
   );
 }
 
+export const getServerSideProps = async (context) => {
+  console.log("the ocnetx",context);
+  
+  const event = await getEventByID(context.query.eventId);
+  console.log("event", event);
+
+  return { props: { event } };
+};
 export default EventDetailPage;
